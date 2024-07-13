@@ -1,0 +1,217 @@
+*, *:befor, *:after {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-size: 16px;
+    font-family: helvetica;
+    background: black url("images/eyes.jpeg");
+}
+
+#main-cntainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    z-index: -1;
+    animation: lights 0.3s linear infinite;
+    opacity: 10%;
+    transition: all 0.3s linear;
+}
+
+@keyframes lights {
+    0%{
+        background: linear-gradient(90deg, red, black, black, blue);
+    }
+}
+
+
+.eye-box{
+    height: 50%;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    /*align-items: center;*/
+    position: relative;
+    z-index: 99999;
+}
+
+/* For Eyes */
+.eye{
+    width: 45%;
+    height: 20%;
+  /*padding: 5px;*/
+    margin: 5px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    box-shadow:inset 0px -8px 5px #333;
+    animation: blink 3s linear infinite;
+    transition: all 0.3s linear;
+}
+
+@keyframes blink{
+  0%{
+    width: 43;
+    height: 0px;
+  }
+
+  5%{
+    width: 43;
+    height: 20%;
+  }
+}
+
+/* Right Eye */
+.right-eye {
+    position: relative;
+    right: px; 
+    transition: all 0.3s linear;
+}
+
+/* Left Eye */
+.left-eye {
+    position: absolute;
+    transition: all 0.3s linear;
+}
+
+
+/* For Eye Rash */
+.eye-rash {
+    width: 50%;
+    height: 30%;
+    position: relative;
+    top: -15%;
+    right: -22.5%;
+    background: transparent;
+    transform: rotate(-50deg);
+    z-index: 1;
+}
+
+.eye-rash:before {
+    content: "";
+    position: absolute;
+    top: -20%;
+    right: 15%;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-15deg);
+    background: black;
+    z-index: 999;
+    border-radius: 0px 0px 0px 55px;
+    box-shadow:inset 2px -8px 5px #333;
+}
+
+.eye-rash:after {
+    content: "";
+    position: absolute;
+    top: 13%;
+    right: -25%;
+    width: 100%;
+    height: 100%;
+    transform: rotate(18deg);
+    background: black;
+    z-index: 999;
+    border-radius: 0px 0px 0px 50px;
+    box-shadow:inset 8px -2px 5px #333;
+}
+
+.eye-rash2 {
+    width: 50%;
+    height: 2%;
+    background: black;
+    position: absolute;
+    top: 1%;
+    right: 37%;
+    transform: rotate(58deg);
+    z-index: 999999;
+}
+
+.eye-rash2:before {
+    content: " ";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: black;
+    transform: rotate(30deg);
+}
+
+/* For Inner Cycle */
+.inner {
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    background: #000000;
+}
+
+/* Inner Left Cycle */
+.inner-left {
+    position: relative;
+    left:45%;
+    top: 40%;
+    transition: all 0.3s linear;
+}
+
+/* Inner Right Cycle */
+.inner-right {
+    position: relative;
+    left: 14%;
+    top: 40%;
+    transition: all 0.3s linear;
+}
+
+.mouth-box {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.mouth {
+    width: 5%;
+    height: 30%;
+    background: transparent;
+    box-shadow:inset 3px 20px 5px #333;
+    border-radius: 5px 0px;
+    transform: rotate(70deg);
+    position: absolute;
+    top: 20%;
+    transition: all 0.3s linear;
+    
+}
+
+input[type="button"] {
+    font-size: 10vw;
+    font-family: monospace;
+    color: #e3f6f5;
+    padding: 10px;
+    background: transparent;
+    border: 2px solid #333;
+    border-radius: 5px;
+    box-shadow: 5px 10px #333;
+    transition: all 0.1s linear;
+}
+
+input[type="button"]:focus {
+    background: red;
+    border: 2px solid red;
+    box-shadow: 5px 10px #e3f6f5;
+}
+
